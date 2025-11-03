@@ -1,0 +1,35 @@
+{
+  "name": "@fallid/test-backend-nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "license": "MIT",
+  "author": "Ahmad Naufal",
+  "main": "./src/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint ./",
+    "migrate": "node-pg-migrate",
+    "start:dev": "nodemon ./src/server.js"
+  },
+  "dependencies": {
+    "@hapi/hapi": "^21.4.3",
+    "@hapi/jwt": "^3.2.1",
+    "@types/pg": "^8.15.6",
+    "auto-bind": "4",
+    "bcrypt": "^6.0.0",
+    "dotenv": "^17.2.3",
+    "joi": "^18.0.1",
+    "nanoid": "^5.1.6",
+    "node-pg-migrate": "^8.0.3",
+    "pg": "^8.16.3",
+    "rate-limiter-flexible": "^8.1.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.0",
+    "@fallid/eslint-commonjs-config": "^1.0.5",
+    "@stylistic/eslint-plugin": "^5.5.0",
+    "eslint": "^9.39.0",
+    "globals": "^16.5.0",
+    "nodemon": "^3.1.10"
+  }
+}
