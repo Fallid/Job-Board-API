@@ -1,0 +1,128 @@
+{
+	"info": {
+		"_postman_id": "27fc75ce-05e0-4b53-82f6-6fc82dae23f0",
+		"name": "BFI Tech",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "30161891"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"test1\",\r\n    \"password\": \"secret\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/login"
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"test1\",\r\n    \"password\": \"secret\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/login"
+			},
+			"response": []
+		},
+		{
+			"name": "Post Job",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InVzZXItMThhNTJGN2FVN1VvZ0pSTSIsInVzZXJuYW1lIjoidGVzdDEiLCJpYXQiOjE3NjIxNTczMDF9.86dsJS3KpEt2I3oFQF-Ucv3AnI5C5mKZOdHMfFFyw0I"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n    \"title\": \"job titel 1\", \r\n    \"descriptions\": \"lore ipsum\", \r\n    \"companyName\": \"BFI Tech\", \r\n    \"salary\": 5000000, \r\n    \"location\": \"Jakarta\" \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/jobs"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Jobs",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InVzZXItMThhNTJGN2FVN1VvZ0pSTSIsInVzZXJuYW1lIjoidGVzdDEiLCJpYXQiOjE3NjIxNTczMDF9.86dsJS3KpEt2I3oFQF-Ucv3AnI5C5mKZOdHMfFFyw0I"
+					}
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "location",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/jobs?salary=10000000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"jobs"
+					],
+					"query": [
+						{
+							"key": "location",
+							"value": "Bandung",
+							"disabled": true
+						},
+						{
+							"key": "salary",
+							"value": "10000000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Apply Job",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InVzZXItMThhNTJGN2FVN1VvZ0pSTSIsInVzZXJuYW1lIjoidGVzdDEiLCJpYXQiOjE3NjIxNTczMDF9.86dsJS3KpEt2I3oFQF-Ucv3AnI5C5mKZOdHMfFFyw0I"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"url": "http://localhost:3000/jobs/job-wlktXQwWXiC8XoFB/apply"
+			},
+			"response": []
+		}
+	]
+}
